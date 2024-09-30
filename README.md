@@ -8,3 +8,5 @@ git submodule add https://github.com/ThrowTheSwitch/Unity.git lib/unity
 </br>
 git submodule update --init --recursive
 <p> whatsmore</p>
+
+[![CMake](https://github.com/TylerEvans-Dev/lab4Working/actions/workflows/main.yml/badge.svg)](https://github.com/TylerEvans-Dev/lab4Working/actions/workflows/main.yml)
