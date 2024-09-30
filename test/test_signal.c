@@ -113,6 +113,7 @@ void runner_thread (__unused void *args)
 {
     for (;;) {
         printf("Starting test run.\n");
+        sleep_ms(8000);
         UNITY_BEGIN();
         RUN_TEST(test_noop);
         RUN_TEST(test_out_of_order);

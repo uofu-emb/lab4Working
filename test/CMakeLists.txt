@@ -12,7 +12,7 @@ add_custom_target(flash_test_
     picotool load -f $<TARGET_FILE:lab4_test_fifo> DEPENDS lab4_test_fifo)
 
 
-add_executable(lab4_test_signal test_signal.c ../src/signal.c unity_config.c)
+add_executable(lab4_test_signal test_signal.c ../src/signaling.c unity_config.c)
 target_link_libraries(lab4_test_signal PRIVATE
   pico_stdlib
   pico_async_context_freertos
@@ -24,3 +24,6 @@ pico_enable_stdio_uart(lab4_test_signal 0)
 pico_enable_stdio_usb(lab4_test_signal 1)
 add_custom_target(flash_test_signal
     picotool load -f $<TARGET_FILE:lab4_test_signal> DEPENDS lab4_test_signal)
+
+pico_add_extra_outputs(lab4_test_signal)
+pico_add_extra_outputs(lab4_test_fifo)
