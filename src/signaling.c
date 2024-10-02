@@ -5,7 +5,7 @@ void signal_handle_calculation(SemaphoreHandle_t request,
                                struct signal_data *data)
 {
     //Take request, will wait forever for the semaphore right now
-    BaseType_t retStatus = xSemaphoreTake(request, 1000);
+    BaseType_t retStatus = xSemaphoreTake(request, portMAX_DELAY);
     if( retStatus == pdPASS )
     {
         data->output = data->input+5;
